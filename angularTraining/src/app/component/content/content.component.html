@@ -1,0 +1,47 @@
+<nav nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    PHONE BOOK
+  </nav>
+<div class= "container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card ">
+                <div class="card-header">
+                    <h2>INDEX</h2>
+                  </div>
+              <div class="card-body">
+                <ul  *ngFor="let user of users">
+                    <li (click)="selectUser(user)">{{user.name}}</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card data" *ngIf="selectedUser">
+                <div class="card-header ">
+                    <h2 class="card-title">DATA</h2>
+                    <h3 class="card-subtitle mb-2 text-muted">id: {{selectedUser.id}} name: {{selectedUser.name}}</h3>
+                  </div>
+              <div class="card-body">
+                <p class="ds-text-small"> Username: {{selectedUser.username}}</p>
+                <p class="ds-text-small"> Emai: {{selectedUser.email}}</p>
+                <p class="ds-text-small"> Website: {{selectedUser.website}}</p>
+                <p class="ds-text-small"> Address: {{selectedUser.address.street}}
+                    {{selectedUser.address.suite}}
+                    {{selectedUser.address.city}}
+                    {{selectedUser.address.zipcode}}
+                    {{selectedUser.address.geo.lat}}
+                    {{selectedUser.address.geo.lng}}
+                </p>
+                <p class="ds-text-small"> Company: {{selectedUser.company.name}} </p>
+                <p class="ds-text-small">Catch Phrase: {{selectedUser.company.catchPhrase}}</p>
+                <p class="ds-text-small">bs: {{selectedUser.company.bs}}</p>
+              </div>
+              <div class="card-footer text-muted">
+                <p class="ds-text-small"> Phone: {{selectedUser.phone}}</p>
+              </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

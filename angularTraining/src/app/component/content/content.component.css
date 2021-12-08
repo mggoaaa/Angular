@@ -1,0 +1,21 @@
+.example-card {
+    max-width: 400px;
+    border-color: black;
+    border-radius: 30px;
+
+  }
+  .container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .data{
+    height: 72vh;
+  }
+  .row{
+    padding-top: 10px;
+  }
+  ul{
+    cursor:context-menu;
+  }
